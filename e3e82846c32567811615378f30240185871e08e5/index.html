@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Avanish Kumar !</title>
+	<meta name="description" content="Avanish Kumar - Web Designer, Front End Developer, Graphic Designer">
+	<meta name="keywords" content="Avanish Kumar - Web Designer, Front End Developer, Graphic Designer">	
+	<meta property="og:image" content="shareImg.png" />
+	<link rel="SHORTCUT ICON" href="logo.png">
+  
+  <!-- Styles -->
+	<link href="http://fonts.googleapis.com/css?family=Lekton" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Molengo" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="reset.css" />    
+	<link type="text/css" rel="stylesheet" href="style.css" /> 
+
+  <!-- Scripts -->
+  <script src="scripts/jquery-1.6.3.min.js" type="text/javascript"></script>
+  <script src="scripts/jquery.spritely-0.6.js" type="text/javascript"></script>  
+  <script src="scripts/data.js" type="text/javascript"></script>  
+  <script src="scripts/game.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+		<script type="text/javascript">
+			window.location = 'ie.html';
+		</script>
+	<![endif]-->
+	<script type="text/javascript">	
+		$(document).ready(function(){
+			$('#innerLoading .me').sprite({fps: 9, no_of_frames: 3}).spState(1);
+			var game = new Game();
+		});	
+
+		function startGame() {
+			$('html, body').animate({scrollTop: 0});
+			$('#loadingGame').fadeOut('fast', function(){
+				$(this).remove();
+			})
+		}
+	</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120379974-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120379974-2');
+</script>
+	
+	
+</head>
+<body onload="startGame()">
+	
+	
+	<!-- Loader -->
+	<div id="loadingGame">
+		<div id="innerLoading">
+			<div class="me"></div>
+			<strong><p>Just a few moments</p></strong>
+			<p><h1>Welcome to <b> AVANISH KUMAR</b> Profile</h1></p>
+			<span>Don't go anywhere...</span>
+		</div>
+	</div>
+
+	<!-- Navigation -->
+	<nav>
+		<ul class="clearfix">
+			<li><a class="current" href="#startCave">Home</a></li>
+			<li><a href="#aboutHouse">About Me</a></li>
+			<li><a href="#servicesHouse">Services & Skills</a></li>
+			<li><a href="#portfolioHouse">Projects & Experiences</a></li>
+			<li><a href="#boat">Contact</a></li>
+			<li><a href="antipode.html" onclick="window.open('antipode.html')">The Other Side</a></li>
+			<li class="last"><a href="#howToPlay">?</a></li>
+		</ul>
+	</nav>
+
+	<!-- Notifications Manager -->
+	<div id="notifications"><div class="inner"></div><span class="close">Close(X)</span></div>
+	
+	<div id="wrapper">			
+		
+		<!-- Main Text -->
+		<hgroup id="myInfo">
+			
+			<h1>AVANISH <br />KUMAR</h1>
+			<h2>Web Designer, Front End Engineer,<br> Graphic Designer</h2>
+						
+		</hgroup>
+
+		<!-- Start Text -->
+		<p id="startText">
+			<img src="images/keyboardArrows.png" alt="keyboard arrows" />
+			Start playing by tapping/clicking on the screen<br /> arrow keys for navigation.
+		</p>
+
+		<!-- Start Cave -->
+		<div id="startCave" class="cave"></div>		
+		<div id="startCaveHole" class="caveHole"></div>
+		<div id="startCaveHoleTrack" class="caveHoleTrack"></div>
+		
+		<!-- Main Road -->
+		<div id="mainRoad" class="road"></div>
+		<div id="leftFence"></div>
+		<div id="rightFence"></div>
+		
+		<!-- Me -->
+		<div id="avanish"></div>
+		
+		<!-- Stop Station 1 -->
+		<div id="aboutRoad" class="road side"></div>
+		<div id="aboutHouse" class="house">
+			<div class="door"></div>
+			<div class="lightbox">
+				<div class="inner about">
+					<h2>About Me</h2>
+					<img src="images/aboutImg.png" alt="Avanish Kumar" />
+					<article>
+						<p><strong>Simply said, <br>I design & code.<br>And... I like good food</strong>!</p>
+						<p>
+							My name is <strong>Avanish Kumar</strong> and I'm a highly motivated <br /><strong>Full Stack Developer</strong> with a great passion for <br />UI / UX, Web Design and Graphic Design.
+							<br>I currently tinker around internet and earth :) exploring human centered machine learning and human centric lighting. (Yeah just slap a human centric or centered to anything these days...)
+							
+						</p>
+           	
+    	      <p>
+    	      	As a hybrid designer and developer I enjoy the challenges of analog installations. Especially cybernetics.<br><br>
+				Hit me up!<br>
+				<strong>Always keen to explore new cultures, people, experiences and challenges.<br>
+				info@avanishkumar.in</strong><br>
+				<!-- <a target="_blank" href="my_resume.pdf" class="btn-rounded-white">Download Resume</a> -->
+  	      	</p>
+           	<p>
+           		Cheers,<br />Avanish Kumar
+         		</p>
+        	</article>
+				</div>
+				<span id="closeLB">CLOSE&nbsp;&nbsp;</span>
+			</div>
+		</div>
+		<div id="aboutSign" class="sign"><span>About Me</span></div>
+		<div id="aboutHole" class="hole"></div>
+
+		<!-- Stop Station 2 -->
+		<div id="servicesRoad" class="road side"></div>
+		<div id="servicesHouse" class="house">
+			<div class="door"></div>
+			<div class="lightbox">
+				<div class="inner services">
+					<h2>Services & Skills</h2>
+					<section>
+						<h3>Things that I do</h3>
+						<div id="sCode" class="box clearfix">
+							<div class="icon"></div>
+							<h4>Beautiful Websites</h4>
+							<p>I enjoy developing web apps with great concepts. I design beautiful websites with a great emphasis for <strong>UX and UI design</strong>.</p>
+						</div>
+						<div id="sWebsites" class="box clearfix">
+							<div class="icon"></div>
+							<h4>Animation & Movie Making</h4>
+							<p>I can create beatiful animation and small javascript oriented games for your need.</p>
+						</div>
+						<div id="sThinking" class="box clearfix">
+							<div class="icon"></div>
+							<h4>Creative Direction<Graphic Design></h4>
+							<p>If you have an idea for a new website or you need some graphics for your work, I could help you expanding your idea and help you to develop it.</p>
+						</div>
+					</section>
+					<section id="skillsList">
+						<h3>How?</h3>
+						<ul>
+							<li>HTML, CSS, JS</li>
+							<li>JS frameworks (React, jQuery, etc.) </li>
+							<li>NodeJS</li>
+							<li>MsAccess, MySQL</li>
+							<li>PHP & Wordpress</li>
+						</ul>
+						<ul>
+							<li>Sketch</li>
+							<li>Photoshop</li>
+							<li>Illustrator</li>
+							<li>Corel Draw</li>
+						</ul>
+						<ul>
+							<li>Research</li>
+							<li>Innovation</li>
+							<li>Experience</li>
+							<li>Out Of The Box Thinking</li>
+						</ul>
+					</section>
+					<div class="clear"></div>
+				</div>
+				<span id="closeLB">CLOSE&nbsp;&nbsp;</span>
+			</div>
+		</div>
+		<div id="servicesSign" class="sign"><span>Services & Skills</span></div>
+		<div id="servicesHole" class="hole"></div>
+		
+		<!-- Stop Station 3 -->
+		<div id="portfolioRoad" class="road side"></div>
+		<div id="portfolioHouse" class="house">
+			<div class="door"></div>
+			<div class="lightbox">
+				<div class="inner portfolio clearfix">
+					<h2>Works & Projects</h2>
+					<div class="portfolioBox">
+						<div class="inner">
+							<a class="portfolioImg" href="https://avanishkr018.github.io/aboutme_html/" target="_blank">
+								<img src="images/portfolio/thumb.jpg" alt="About Me" />
+							</a>
+							<h4>JavaScript Animation</h4>
+							<p>This is the Random Creation Based on JavaScript Animation.</p>
+						</div>
+					</div>
+					<div class="portfolioBox">
+						<div class="inner">
+							<a class="portfolioImg" href="https://github.com/avanishkr018/LocalMail" target="_blank">
+								<img src="images/portfolio/mail_server.png" alt="LocalMail" />
+							</a>
+							<h4>Local Mail Server</h4>
+							<p>Created a Local Mail Server as a part of Training Programme at Bharat Electronics Ghaziabad.</p>
+						</div>
+					</div>
+					<div class="portfolioBox">
+						<div class="inner">
+							<a class="portfolioImg" href="https://github.com/avanishkr018/RealTime_Messaging-Android-Application" target="_blank">
+								<img style="width: 70px; height: 70px; padding: 15px; background-color: #a3639f;" src="images/portfolio/msgapp.png" alt="Real Time Messaging Android Application." />
+							</a>
+							<h4>RTM Android Application</h4>
+							<p>Real Time Messaging Android Application based on Realtime.co APIs</p>
+						</div>
+					</div>
+					<div class="portfolioBox">
+						<div class="inner">
+							<a class="portfolioImg" href="https://github.com/avanishkr018/PHP_SCRIPTS" target="_blank">
+								<img src="images/portfolio/bomb.jpg" />
+							</a>
+							<h4>PHP SCRIPTS</h4>
+							<p>
+							Fake Mail Bombing Script,
+							Fake Mail Tester Script,
+							Phishing Mail Script
+							</p>
+						</div>
+					</div>
+					<div class="portfolioBox">
+						<div class="inner">
+							<a class="portfolioImg" href="https://github.com/avanishkr018/MotionSensor" target="_blank">
+								<img src="images/portfolio/android.png" alt="MotionSensor" />
+							</a>
+							<h4>Motion Sensor Application</h4>
+							<p>An Android Based Motion Sensor Application to detect Motion of a person based on device sensor.</p>
+						</div>
+					</div>
+					 <div class="portfolioBox">
+						 <div class="inner">
+							<a class="portfolioImg" href="http://www.rampravesh.in/" target="_blank">
+								<img src="images/portfolio/website.jpg" alt="Web Development" />
+							</a>
+							<h4>Web Development</h4>
+							<p>Designed and coded a self portfolio website of a RADAR ENGINEER <b><u>"www.rampravesh.in"</b></u></p>
+						</div>
+					</div>
+	
+	
+					<div class="shelf"></div>
+					<div class="shelf bottom"></div>
+				</div>
+				<span id="closeLB">CLOSE&nbsp;&nbsp;</span>
+			</div>
+		</div>
+		<div id="portfolioSign" class="sign"><span>Works & Projects</span></div>
+		<div id="portfolioHole" class="hole"></div>
+
+		<!-- View -->
+		<div id="rightTrees" class="trees"></div>
+		<div id="leftGrass" class="grass"></div>
+
+		<!-- End Cave -->
+		<div id="endSea" class="sea"></div>		
+		<div id="endBridge" class="bridge"></div>
+		<!-- <div id="endCaveHoleGlow"></div> -->
+		<div id="boat" class="isMoored">
+			<div class="meSail"></div>
+		</div>
+		<div id="contact">
+			<h1>Stay In Touch</h1>
+			<div id="mysocial">
+				<a title="LinkedIn" href="https://www.linkedin.com/in/avanish-kumar-60b878122/" target="_blank"><img src="images/social/linkedin.png" alt="LinkedIn" /></a>
+				<a title="Facebook" href="https://www.facebook.com/avanishkr018" target="_blank"><img src="images/social/facebook.png" alt="Facebook" /></a>
+				<a title="GitHub" href="https://github.com/avanishkr018" target="_blank"><img style="background-color: white; border-radius: 50em;" src="images/social/github.png" alt="Github" /></a>
+				<a title="Email" href="mailto:meetavanish@gmail.com"><img src="images/social/gmail.png" alt="Gmail" /></a>
+			</div>
+			<p>Feel free to leave comments about anything you want.</p>
+			
+			<div id="contact-form">
+            <form method="POST" action="https://formspree.io/meetavanish@gmail.com">
+				<input type="name" name="_name" placeholder="Your Name" required>
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+			</div>
+ 
+		<!-- Flowers -->
+		<!--
+		
+		<div class="flowers r1"></div>
+		<div class="flowers r2"></div>
+		<div class="flowers r3"></div>
+		<div class="flowers r4"></div>
+		<div class="flowers r5"></div>
+		<div class="flowers r6"></div>
+		<div class="flowers r7"></div>
+		<div class="flowers r8"></div>
+		<div class="flowers r9"></div>
+		<div class="flowers r10"></div>
+		<div class="flowers r11"></div>
+		<div class="flowers r12"></div> 
+		
+		-->
+		
+	</div>
+	
+	<div id="howToPlay">
+		<div class="lightbox">
+			<div class="inner howtoplay">
+				<h2>How To Play?</h2>
+				<article>					
+					<div id="htpArrows" class="box clearfix">
+						<div class="icon"></div>
+						<p>Use the keyboard arrows to move (↑ ↓ → ←)</p>
+					</div>
+					<div id="htpHouses" class="box clearfix">
+						<div class="icon"></div>
+						<p>Enter buildings to get access information about me and my projects</p>
+					</div>
+					<div id="htpMouse" class="box clearfix">
+						<div class="icon"></div>
+						<p>Teleport the character by clicking anywhere on the screen</p>
+					</div>
+					<div id="htpEsc" class="box clearfix">
+						<div class="icon"></div>
+						<p>Press the "Esc" key to leave buildings / close the notifications bar</p>
+					</div>
+					<div id="htpShare" class="box clearfix">
+						<div class="icon"></div>
+						<p>Contact me and share my portfolio with your friends! :)<br>Ping me at : "info@avanishkumar.in" </p>
+					</div>
+      	</article>				
+			</div>
+			<span id="closeLB">CLOSE&nbsp;&nbsp;</span>
+		</div>
+		
+	</div>
+
+<img src="images/wood.png" style="display: none;" />
+
+
+</body>
+</html>
